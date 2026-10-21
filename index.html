@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>이진호 | Portfolio</title>
+<meta name="description" content="기술을 이해하는 전략기획자, 이진호의 포트폴리오">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="이진호 | Portfolio">
+<meta property="og:description" content="불확실성을 판단 가능한 기준으로 바꾸는 사람 — 전략기획 포트폴리오">
+</head>
+<body>
+
+<nav><div class="wrap"><b>이진호</b>
+<ul><li><a href="#strengths">Strengths</a></li><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#skills">Skills</a></li><li><a href="#contact">Contact</a></li></ul>
+</div></nav>
+
+<div class="wrap">
+
+<header>
+  <p class="eyebrow">Strategy &amp; Planning Portfolio</p>
+  <h1>불확실성을<br><em>판단 가능한 기준</em>으로 바꾸는 사람</h1>
+  <p class="lead">경영학을 전공하고 SK AX SKALA에서 데이터 분석과 AI Agent를 직접 구현했습니다. 선택지를 같은 기준으로 비교하고, 모델의 성능이 아니라 손익과 근거로 결론을 내는 일을 합니다.</p>
+  <div class="meta">
+    <span class="chip">서강대학교 유럽문화 · 경영학 복수전공</span>
+    <span class="chip">SK AX SKALA 4기</span>
+    <span class="chip">English OPIc IH · Deutsch B1 · Français A2</span>
+  </div>
+</header>
+
+<section id="strengths">
+  <h2>Core Strengths</h2>
+  <p class="h2sub">세 가지 역량으로 전략기획에 기여합니다.</p>
+  <div class="strengths">
+    <div class="card"><div class="num">01</div><h3>손익으로 결론 내는 분석력</h3><p>정확도 같은 모델 지표에서 멈추지 않고, 비용·손익분기·타겟 규모처럼 의사결정에 쓰이는 숫자로 결론을 냅니다.</p></div>
+    <div class="card"><div class="num">02</div><h3>근거를 의심하는 검증력</h3><p>자체 보고와 독립 출처를 구분하고, 결과가 분할·가정에 따라 흔들리는지 직접 확인한 뒤에만 결론을 씁니다.</p></div>
+    <div class="card"><div class="num">03</div><h3>기술을 이해하는 기획력</h3><p>LLM·RAG·멀티에이전트를 직접 만들어 봤기 때문에, 기술적으로 가능한 것과 비용이 드는 것을 구분해 기획합니다.</p></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <p class="h2sub">최신순으로 정리했습니다.</p>
+
+  <article class="proj featured">
+    <div class="ptop"><span class="ptag">FEATURED · 개인 프로젝트</span><span class="pinfo" style="margin:0">2026.09 – 진행 중</span></div>
+    <h3>개인화 오퍼 증분효과 기반 타겟팅</h3>
+    <p class="pinfo">인과추론 · 기여도 100%</p>
+    <dl class="grid2">
+      <dt>문제</dt><dd>마케팅 오퍼는 보통 '반응할 확률이 높은 고객'에게 보냅니다. 그런데 그중 상당수는 오퍼가 없어도 어차피 구매할 고객이라, 그 혜택은 이미 일어날 일에 나가는 비용입니다. 반응 확률이 아니라 <b>오퍼로 행동이 바뀌는 정도(증분효과)</b>로 대상을 고르면 같은 예산으로 얼마나 더 벌 수 있는지 검증했습니다.</dd>
+      <dt>데이터</dt><dd>Hillstrom 이메일 캠페인 6.4만 명 — 남성 메일 / 여성 메일 / 미발송에 무작위 배정된 실제 캠페인</dd>
+      <dt>과정</dt><dd>
+        <div class="flow"><span>증분효과 추정 4종 vs 반응 예측</span><i>→</i><span>Qini·증분 곡선 평가</span><i>→</i><span>손익 곡선</span><i>→</i><span>타겟 규모를 원(₩)으로 결정</span></div>
+        개인별 처치효과는 관측이 불가능해 정확도·AUC를 쓸 수 없으므로 집단 단위 지표로 평가했고, 오퍼 단가와 증분 1건의 공헌이익으로 손익분기를 세워 몇 명에게 보낼지를 정했습니다.</dd>
+      <dt>결과</dt><dd>
+        · 예산·인원을 고정하고 명단만 바꿨을 때 <b>증분 이익 43% 증가</b> ($159 → $228)<br>
+        · 전원 발송 −$125(적자) → 증분 상위 51%만 발송 +$397, <b>오퍼 비용 49% 절감하며 흑자 전환</b><br>
+        · '확실 고객'으로 분류된 24.9%의 실제 증분은 −0.03%p — 전체 4분의 1에 나간 혜택이 낭비였음을 확인</dd>
+      <dt>진짜 결론</dt><dd>같은 데이터에서 오퍼 종류만 바꾸자 여성 메일에선 반응 예측보다 83% 더 벌었지만, 남성 메일에선 2% 차이에 그쳤습니다. 평균 효과가 손익분기를 넉넉히 넘으면 전원 발송이 답입니다. <b>기법의 가치는 상황에 따라 달라진다</b>는 것을 데이터로 보였습니다.</dd>
+    </dl>
+    <p class="insight"><b>Insight</b> 어떤 성과 지표를 고르느냐가 어떤 모델을 쓰느냐보다 결론을 크게 바꿉니다. 마케팅 예산·이벤트 보상·유저 리텐션 투자처럼 "누구에게 얼마를 쓸 것인가"를 정하는 전략 판단에 그대로 적용할 수 있습니다.</p>
+    <div class="stack"><span>Python</span><span>scikit-learn</span><span>Uplift Modeling (S/T/X-learner)</span><span>Qini</span><span>pytest 52개</span></div>
+  </article>
+
+  <article class="proj">
+    <div class="ptop"><span class="ptag">팀 프로젝트 · 통합 담당</span><span class="pinfo" style="margin:0">2026.09</span></div>
+    <h3>KV Cache 최적화 기술 다관점 평가 멀티에이전트</h3>
+    <p class="pinfo">SKALA · 5인 팀 · Graph·통합 담당 · <a href="https://github.com/thisischeese/kv-cache-optimization-multi-agents" target="_blank">GitHub</a></p>
+    <dl class="grid2">
+      <dt>문제</dt><dd>새 기술을 검토할 때 개발사가 낸 수치만 보고 판단하면 결론이 좋은 쪽으로 기웁니다. KV 캐시 최적화 기술 2종(KIVI, InfiniGen)을 근거의 출처와 논조를 구분해 평가하는 시스템을 만들었습니다.</dd>
+      <dt>솔루션</dt><dd>논문 10편(184쪽)을 RAG로 검색하고 웹 검색을 더해 TRL·시장성·이해관계자·도메인 네 관점에서 병렬 평가한 뒤, 종합 보고서를 PDF로 내는 LangGraph 멀티에이전트</dd>
+      <dt>역할</dt><dd>
+        · 근거마다 출처·쪽 번호·자체 보고/독립 출처·논조를 담는 <b>공통 데이터 계약</b>을 설계해 5명이 충돌 없이 병렬 개발<br>
+        · 기준에 못 미친 관점만 1회 재조사하고, 그래도 부족하면 한계점으로 남기는 <b>비용 상한</b> 구조<br>
+        · 없는 출처를 인용할 수 없도록 참고문헌 자동 생성, LLM 없이 규칙으로 도는 검수 루프</dd>
+      <dt>결과</dt><dd>전체 실행 약 2분, 근거 기반 보고서 17쪽 자동 생성. 팀원의 웹 검색이 동명 사이트를 근거로 가져와 TRL이 과대 평가된 문제를 찾아 정정했습니다.</dd>
+    </dl>
+    <p class="insight"><b>Insight</b> 기술·투자 검토에서 가장 위험한 것은 확증편향입니다. 자체 보고와 독립 출처를 구분하고 우열을 섣불리 판정하지 않는 장치를 구조로 만들었습니다.</p>
+    <div class="stack"><span>LangGraph</span><span>LangChain</span><span>RAG · Qdrant</span><span>Pydantic</span><span>pytest 150개</span></div>
+  </article>
+
+  <article class="proj">
+    <div class="ptop"><span class="ptag">개인 프로젝트 · 기획·설계</span><span class="pinfo" style="margin:0">2026.09</span></div>
+    <h3>하루 한바퀴 — 할 일 동선 최적화 서비스</h3>
+    <p class="pinfo">SKALA AI 웹서비스 미니 프로젝트 · 3일 · 기여도 100%</p>
+    <dl class="grid2">
+      <dt>문제</dt><dd>은행 마감, 병원 휴진, 처방전 이후 약국, 짐이 생기는 장보기처럼 영업시간·선후관계·체류시간·짐 제약이 겹치면 순서를 손으로 짤 수 없습니다. 지도 앱은 A→B 한 구간만 풀어 줍니다.</dd>
+      <dt>솔루션</dt><dd>문장 한 줄을 할 일로 분해해 제약을 붙이고, 방문 순서와 도착 시각을 계산하는 서비스를 기획·설계하고 프로토타입으로 검증했습니다.</dd>
+      <dt>기획 산출물</dt><dd>요구사항 20건(액터·화면·API를 한 줄에 매핑해 누락 판정), 화면 정의 10개, ERD 15테이블, API 28개, 기획서 40쪽</dd>
+      <dt>판단</dt><dd>초안 테이블 24개가 3일 규모에 과하다고 보고 <b>15개로 줄였고</b>, 합치지 않은 테이블은 이유를 따로 적었습니다. 지도 API 비용은 캐싱 단위를 설계해 줄이도록 했습니다.</dd>
+    </dl>
+    <p class="insight"><b>Insight</b> 기획은 더하는 일보다 범위를 정하는 일입니다. 주어진 기간과 비용 안에서 무엇을 빼고 무엇을 지킬지 근거와 함께 정했습니다.</p>
+    <div class="stack"><span>서비스 기획</span><span>OpenAPI 3.0</span><span>ERD · DBML</span><span>JavaScript</span><span>PostgreSQL</span></div>
+  </article>
+
+  <div class="minor">
+    <article class="proj">
+      <div class="ptop"><span class="ptag">팀 프로젝트</span><span class="pinfo" style="margin:0">2026.09</span></div>
+      <h3>Hype Boy — 피트니스 사업자용 Threads 콘텐츠 코치</h3>
+      <p class="pinfo">SKALA · 4인 팀 · PubMed Tool 담당 · <a href="https://github.com/thisischeese/HypeBoy" target="_blank">GitHub</a></p>
+      <dl class="grid2">
+        <dt>개요</dt><dd>게시물 반응·시즌 뉴스·논문을 근거로 다음 글 주제를 추천하고 초안부터 게시까지 이어지는 에이전트</dd>
+        <dt>역할</dt><dd>PubMed 논문 조회 Tool 개발. 토큰 비용을 줄이려 최근 2년·최대 5편으로 제한했고, 전체 시연을 직접 돌려 에이전트 문제 3가지를 찾아 팀에 공유했습니다.</dd>
+      </dl>
+      <div class="stack"><span>LangChain Tool</span><span>PubMed API</span><span>pytest</span></div>
+    </article>
+
+    <article class="proj">
+      <div class="ptop"><span class="ptag">팀 프로젝트 · QA</span><span class="pinfo" style="margin:0">2026.08</span></div>
+      <h3>지원나침반 — 정부 지원사업 통합 신청 플랫폼</h3>
+      <p class="pinfo">SKALA 8반 1팀 '반짝반짝' · 6인 팀 · QA 담당</p>
+      <dl class="grid2">
+        <dt>문제</dt><dd>지원사업 안내를 받은 사람의 절반(51.9%)이 신청까지 가지 못하고, 신청이 없으면 예산이 집행되지 않습니다.</dd>
+        <dt>역할</dt><dd>스프린트를 기능 크기가 아니라 가치 기준으로 나눈 애자일 개발에서 QA를 맡아, 프론트 연동 전에 API를 검증하고 신청 전후 상태 전환을 시나리오로 점검했습니다.</dd>
+      </dl>
+      <div class="stack"><span>Agile</span><span>MSA</span><span>Kafka</span><span>LLM</span><span>QA</span></div>
+    </article>
+
+    <article class="proj">
+      <div class="ptop"><span class="ptag">학부 · 조장</span></div>
+      <h3>지역별 화재 발생 예측 모델</h3>
+      <p class="pinfo">서강대학교 캡스톤 디자인</p>
+      <dl class="grid2">
+        <dt>개요</dt><dd>코드 경험 없이 R을 독학해 전처리부터 시계열 모델링까지 직접 수행했습니다. 지역마다 화재 집계 기준과 패턴이 달라 전국 단일 모델이 맞지 않자, 지역별로 다른 모델을 적용했습니다.</dd>
+        <dt>결과</dt><dd>기한 내 완성, 지도교수 공모전 출품 권유</dd>
+      </dl>
+      <div class="stack"><span>R</span><span>ARIMA</span><span>Time-series</span></div>
+    </article>
+
+    <article class="proj">
+      <div class="ptop"><span class="ptag">학부 · 팀 프로젝트</span></div>
+      <h3>인도 난방기기 시장 진입 전략</h3>
+      <p class="pinfo">서강대학교 국제마케팅</p>
+      <dl class="grid2">
+        <dt>개요</dt><dd>국가 평균으로는 고객이 보이지 않아 분석 단위를 주(州)로 바꾸고, 기후 → 소득 계층 → 전력 안정성 → 유통 구조 순으로 후보를 좁혔습니다.</dd>
+        <dt>결과</dt><dd>진입 지역·유통 경로·가격대까지 도출, 교수 호평</dd>
+      </dl>
+      <div class="stack"><span>Market Entry</span><span>Segmentation</span></div>
+    </article>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <p class="h2sub">최신순</p>
+  <ul class="timeline">
+    <li><p class="when">2026.07 – 2026.12 (수료 예정)</p><h4>SK AX SKALA 4기 (판교 8반)</h4><p>프로그래밍 기초부터 데이터 분석, 생성형 AI 서비스 개발까지 6개월 전일제 교육. 팀 프로젝트마다 QA·Tool 개발·통합 등 매번 다른 역할을 맡았습니다.</p></li>
+    <li><p class="when">2020.03 – 2026.08</p><h4>서강대학교 유럽문화 · 경영학 복수전공 졸업</h4><p>캡스톤 디자인 조장, 국제마케팅 시장 진입 전략 프로젝트</p></li>
+    <li><p class="when">인턴 · 1개월</p><h4>코위버 경영지원팀 인턴</h4><p>견적 비교와 사전품의서 작성, 구매·조달 프로세스 지원. 금액·근거 서류 하나가 비면 결재가 멈추는 것을 보며 의사결정 문서의 정확성을 배웠습니다.</p></li>
+    <li><p class="when">복무 · 1년 6개월</p><h4>의무경찰 기동대 분대장</h4><p>인근 부대 해체로 전입 인원이 늘어 같은 지시에도 조치가 갈리자, 지시 없이 이유까지 적은 인수인계 수첩을 만들었습니다. 전역 후에도 후임들이 계속 사용했습니다.</p></li>
+  </ul>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <p class="h2sub">분석 · AI · 언어</p>
+  <div class="skills">
+    <div class="card"><h4>Data &amp; Analysis</h4><ul><li>Python (pandas, scikit-learn)</li><li>인과추론 · Uplift Modeling</li><li>R (시계열) · SQL</li></ul></div>
+    <div class="card"><h4>AI</h4><ul><li>LLM · Prompt Engineering</li><li>RAG · Vector DB</li><li>LangChain · LangGraph</li><li>Multi-Agent</li></ul></div>
+    <div class="card"><h4>Languages</h4><ul><li>English — OPIc IH (2026.02)</li><li>Deutsch — Zertifikat B1 (2025.10)</li><li>Français — DELF A2 (2026.03)</li></ul></div>
+  </div>
+</section>
+
+<footer id="contact">
+  <h2>Contact</h2>
+  <p style="color:var(--sub);margin-bottom:14px">함께 일할 기회를 기다리고 있습니다.</p>
+  <a class="mail" href="mailto:yohan0504@naver.com">yohan0504@naver.com</a>
+  <small>© 2026 이진호</small>
+</footer>
+
+</div>
+</body>
+</html>
